@@ -80,6 +80,34 @@
         padding: 0.5em 1em;
         color: #fff;
       }
+
+      @media (min-width: 700px) {
+        
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        header nav ul {
+          display: flex;
+        }
+        header a {
+          border-top: none;
+        }
+        main {
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          gap: 20px;
+        }
+        .cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 10px;
+        }
+        .cards li {
+          margin-bottom: 0;
+        }
+      }
     </style>
   </head>
 
