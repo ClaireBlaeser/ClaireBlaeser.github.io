@@ -1,5 +1,3 @@
-// Complete variable definitions and random function
-
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
 const story = document.querySelector(".story");
@@ -9,7 +7,6 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// Solution: Raw text strings
 
 const characters = ["Eren Jaeger", "Mikasa Ackerman", "Jean Kirstein"];
 const places = ["the gate", "Miami", "the Dungeon"];
