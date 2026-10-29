@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(53, 30, 117);
+    color: rgb(255, 255, 255);
+    padding: 100px;
+}
+fieldset {
+    background-color: rgb(53, 30, 117);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    background-color: rgb(16, 4, 50);
+    padding: 20px;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 30, 117);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(124, 58, 179);
+}
+
+input {
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
