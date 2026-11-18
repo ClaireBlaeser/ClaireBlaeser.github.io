@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil Phone # Enterer</title>
+    <!-- Fonts from wa14 design system -->
+    <link rel="stylesheet" href="https://use.typekit.net/hvb6mzj.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <section class="console-card" aria-label="Evil Phone Number Enterer">
+            
+            <!-- Header & Instructions -->
+            <header class="console-header">
+                <h1 class="app-title">EVIL PHONE # ENTERER</h1>
+                <p class="instructions">
+                    <span class="instruction-group">
+                        HIT <kbd class="key-badge">SPACE</kbd> TO ENTER<span class="desktop-comma">,</span>
+                    </span>
+                    <span class="instruction-group">
+                        <kbd class="key-badge" aria-label="Backspace or Left Arrow">&larr;</kbd> TO DELETE
+                    </span>
+                </p>
+            </header>
+
+            <!-- Phone Number Readout Field -->
+            <div class="phone-display-box" role="status" aria-live="polite">
+                <span id="phone-display" class="phone-digits">(___)-___-____</span>
+            </div>
+
+            <!-- Number Track & Moving Arrow Container -->
+            <div class="selector-stage">
+                <div class="number-track" id="number-track">
+                    <div class="digit-slot" data-digit="0">0</div>
+                    <div class="digit-slot" data-digit="1">1</div>
+                    <div class="digit-slot" data-digit="2">2</div>
+                    <div class="digit-slot" data-digit="3">3</div>
+                    <div class="digit-slot" data-digit="4">4</div>
+                    <div class="digit-slot" data-digit="5">5</div>
+                    <div class="digit-slot" data-digit="6">6</div>
+                    <div class="digit-slot" data-digit="7">7</div>
+                    <div class="digit-slot" data-digit="8">8</div>
+                    <div class="digit-slot" data-digit="9">9</div>
+                </div>
+
+                <!-- Track Line & Sliding Arrow -->
+                <div class="arrow-rail">
+                    <div id="arrow" class="arrow-indicator" aria-hidden="true"></div>
+                </div>
+
+                <!-- Pop-up Overlay (Toggle .is-visible via JS when # field is full) -->
+                <div id="popup-actions" class="popup-overlay" aria-hidden="true">
+                    <button type="button" id="btn-done" class="action-btn btn-done">DONE!</button>
+                    <button type="button" id="btn-restart" class="action-btn btn-restart">RESTART</button>
+                </div>
+            </div>
+
+            <!-- Touch Controls (Visible on 400px / Mobile Screens per vertical sketches) -->
+            <footer class="touch-controls">
+                <button type="button" id="btn-space" class="action-btn touch-btn btn-space">
+                    SPACE
+                </button>
+                <button type="button" id="btn-delete" class="action-btn touch-btn btn-delete" aria-label="Delete last digit">
+                    &larr;
+                </button>
+            </footer>
+
+        </section>
+    </main>
+
+</body>
+</html>
