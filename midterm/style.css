@@ -45,7 +45,7 @@ body {
 h1 {
     font-size: 4rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--color-primary);
 }
 
@@ -53,7 +53,7 @@ h2 {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
     color: var(--color-secondary);
 }
 
@@ -61,7 +61,7 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: var(--spacing-xs);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
     color: var(--color-accent);
 }
 
@@ -127,8 +127,8 @@ p {
 
 
 
-/* .title {
-    tbd
+/* #title {
+    margin-bottom: 0;
 } */
 
 
@@ -269,7 +269,8 @@ header{
 
 /*page title*/
 .pageHeader{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: center;
     gap: var(--spacing-md);
     justify-content: space-between;
@@ -361,12 +362,12 @@ header{
     object-fit: cover;
 }
 
-.aboutContainer p {
+.aboutContainer p{
     color: var(--color-highlight);
 }
 
 .aboutContainer a.link {
-    color: var(--color-secondary);
+    color: var(--color-accent);
     text-decoration: none;
 }
 
@@ -376,6 +377,11 @@ header{
 
 .aboutContainer h3 {
     padding-left: var(--spacing-md);
+}
+.aboutContainer ol {
+    color: var(--color-highlight);
+    margin-left: var(--spacing-lg);
+    font-family: var(--font-secondary);
 }
 
 
@@ -713,55 +719,183 @@ footer .foot-link:hover {
 
 
 
+.pageHeaderRules{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.pageHeaderRules p{
+    margin-top: var(--spacing-md);
+} 
+.rulesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    background-color: var(--color-highlight);
+    border-radius: var(--radius-md);
+    border-color: var(--color-accent);
+    border-width: 2px;
+    border-style: solid;
+    padding: var(--spacing-lg);
+}
+.rulesContainer li {
+    margin-bottom: var(--spacing-md);
+    list-style-type: disc;
+    margin-left: var(--spacing-lg);
+    font-family: var(--font-secondary);
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto;
+    margin-top:0;
+}
+
+.contactGrid .backGround{
+    background-color: var(--color-neutral);
+    border-radius: var(--radius-md);
+    border-color: var(--color-accent);
+    border-width: 2px;
+    border-style: solid;
+    padding: var(--spacing-lg);
+}
+
+.contactGrid .backGround ol {
+    margin-left: var(--spacing-lg);
+    font-family: var(--font-secondary);
+    color: var(--color-highlight);
+    padding-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+}
+
+.contactGrid .backGround p {
+    font-family: var(--font-secondary);
+    color: var(--color-highlight);
+    padding-bottom: var(--spacing-md);
+}
+.contactGrid .backGround h3 {
+    margin-top:0;
+}
+.contactGrid .backGround img{
+    width: 100%;
+    height: 300px;
+}
 
 
-@media screen and (max-width: 700px) {
-    .nav{
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+
+@media screen and (max-width: 400px) {
+    body {
         padding: 0;
+        width: 100%;
     }
 
-    .logo {
-        text-align: center;
+    header {
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-xs);
+        border-radius: var(--radius-sm);
     }
 
     .nav ul {
-        justify-content: center;
-        gap: var(--spacing-xs);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 2px;
     }
 
-    .nav li a {
-        padding: var(--spacing-xs);
+    .nav ul li {
+        padding: 2px;
     }
 
-    .pad{
-        padding: 0;
+    .nav img {
+        width: 35px;
+        height: 35px;
     }
 
-    h1 {
-        font-size: 2rem;
+    .logo {
+        text-align: left;
+        padding: 2px;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .pad {
+        padding: var(--spacing-md);
     }
 
-    h3 {
-        font-size: 1.25rem;
+    h1 { 
+        font-size: 2rem; 
+        margin: 0;
     }
 
-    p {
-        font-size: 1rem;
+    h2 { 
+        font-size: 1.5rem; 
+        margin: 0;
+        margin-top: var(--spacing-md);
     }
 
-    body {
-        padding: var(--spacing-lg);
+    h3 { 
+        font-size: 1.25rem; 
+        margin: 0;
     }
 
-    .aboutContainer h3{
+    p { font-size: 1rem; }
+
+    .aboutContainer h3 {
         padding-left: 0;
     }
 
+    .facultyWelcome {
+        display: flex;
+        flex-direction: column;
+    }
+    .facultyWelcome img {
+        width: 100%;
+        height: auto;
+    }
+    .directContainer {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .directContainer img {
+        height: auto;
+        max-height: 300px;
+    }
+    .toolsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolsGrid img {
+        height: auto;
+        max-height: 300px;
+    }
+    .toolsGrid h2{
+        margin-top: var(--spacing-md);
+    }
+    .policyContainer {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--spacing-md);
+    }
+
+    .policyContainer img {
+        height: auto;
+        max-height: 300px;
+    }
+    .contactGrid{
+        gap: var(--spacing-xs);
+    }
 }
