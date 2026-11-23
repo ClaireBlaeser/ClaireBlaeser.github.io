@@ -188,10 +188,10 @@ body {
     animation: preview-sweep 4s ease-in-out infinite alternate;
 }
 
-@keyframes preview-sweep {
+/* @keyframes preview-sweep {
     0%   { left: 5%; }
     100% { left: 95%; }
-}
+} */
 
 /* ==========================================================================
    Pop-up Action Buttons (DONE! & RESTART)
