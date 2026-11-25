@@ -10,10 +10,10 @@
     --color-highlight: #c5d86d;
 
     /* Derived Colors */
-    --color-background: color-mix(in srgb, var(--color-neutral) 10%, white);
-    --color-surface: #ffffff;
+    --color-background: color-mix(in srgb, var(--color-accent) 10%, white);
+    --color-surface: color-mix(in srgb, var(--color-highlight) 10%, white);
     --color-text-dark: var(--color-neutral);
-    --color-text-light: #ffffff;
+    --color-text-light:color-mix(in srgb, var(--color-highlight) 10%, white);
 
     /* Typography */
     --font-primary: 'wilko-highlight', sans-serif;
@@ -44,7 +44,7 @@
 body {
     font-family: var(--font-primary);
     line-height: 1.4;
-    background-color: var(--color-background);
+    background-image: linear-gradient(var(--color-primary), var(--color-highlight),var(--color-accent), var(--color-secondary));
     color: var(--color-text-dark);
     min-height: 100vh;
     display: flex;
@@ -137,7 +137,7 @@ body {
    ========================================================================== */
 .selector-stage {
     position: relative;
-    background-color: var(--color-surface);
+    background-color: var(--color-background);
     border: 3px solid var(--color-neutral);
     border-radius: var(--radius-md);
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
@@ -157,7 +157,7 @@ body {
     font-size: clamp(1.5rem, 3.5vw, 2.75rem);
     color: var(--color-text-dark);
     padding: var(--spacing-sm) 0;
-    border-right: 2px solid color-mix(in srgb, var(--color-neutral) 30%, transparent);
+    border-right: 2px solid color-mix(in srgb, var(--color-secondary) 50%, transparent);
     user-select: none;
 }
 

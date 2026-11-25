@@ -13,6 +13,13 @@ let arrowPosition = 5;
 let arrowSpeed = 1;
 let phoneNumber = [];
 
+btnSpace.addEventListener("click", addNumberAboveArrow);
+btnDel.addEventListener("click", removeNumberAboveArrow);
+btnBack.addEventListener("click", restart);
+btnDone.addEventListener("click", function(){
+    alert("Your phone number is: " + phoneNumber);
+});
+
 setInterval(function() {
     if (done){
         return;
@@ -34,7 +41,7 @@ setInterval(function() {
     }
     arrow.style.left = arrowPosition + "%";
     console.log(arrowPosition);
-}, 50);
+}, 20);
 
 function restart() {
     done = false;
@@ -68,12 +75,7 @@ function updatePhoneNumberDisplay(){
     page.textContent = "("+spaces[0]+spaces[1]+spaces[2]+") "+spaces[3]+spaces[4]+spaces[5]+"-"+spaces[6]+spaces[7]+spaces[8]+spaces[9];
 }
 
-btnSpace.addEventListener("click", addNumberAboveArrow);
-btnDel.addEventListener("click", removeNumberAboveArrow);
-btnBack.addEventListener("click", restart);
-btnDone.addEventListener("click", function(){
-    alert("Your phone number is: " + phoneNumber);
-});
+
 
 
 updatePhoneNumberDisplay();
